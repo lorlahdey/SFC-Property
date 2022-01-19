@@ -10,7 +10,6 @@ const PropertyController = () => {
         }
 
         const property = new Property({...req.body, image_url:req.file})
-        console.log(property)
         try {
             await property.save()
             res.status(201).send(property)

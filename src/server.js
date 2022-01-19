@@ -30,7 +30,11 @@ mongoose.connect(config.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology:
 
 //simple default route
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello world, server is up and running' })
+    res.status(200).json({ 
+        message: 'Welcome to SFC Lekki Property', 
+        code: 200,
+        status: 'success'
+    })
 })
 
 // using as middleware
